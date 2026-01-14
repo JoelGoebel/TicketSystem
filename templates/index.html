@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Ticketsystem Startseite</title>
+</head>
+<body>
+    <h1>Willkommen im Ticketsystem</h1>
+    <p>Bitte wählen Sie aus:</p>
+    <a href="{{ url_for('employee_overview') }}">
+        <button>Mitarbeiter</button>
+    </a>
+    <a href="{{ url_for('customer_login') }}">
+        <button>Customer</button>
+    </a>
+</body>
+</html>

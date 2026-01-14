@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Ticket bearbeiten</title>
+</head>
+<body>
+    <h1>Ticket bearbeiten: ID {{ ticket[0] }}</h1>
+
+    <form method="POST">
+        <label>Ticket ID:</label>
+        <input type="text" value="{{ ticket[0] }}" readonly><br><br>
+
+        <label>Related Ticket ID:</label>
+        <input type="number" name="related_ticket_id" value="{{ ticket[8] }}"><br><br>
+
+        <label>Customer:</label>
+        <input type="text" value="{{ customer[1] }} {{ customer[2] }}" readonly><br>
+        <label>Customer ID:</label>
+        <input type="text" value="{{ customer[0] }}" readonly><br>
+        <label>Firma:</label>
+        <input type="text" value="{{ ticket[8] }}" readonly><br><br>
+
+        <label>Thema:</label>
+        <input type="text" value="{{ ticket[2] }}" readonly><br><br>
+
+        <label>Beschreibung / Notiz:</label>
+        <textarea rows="5" cols="50" readonly>{{ ticket[3] }}</textarea><br><br>
+
+        <label>Status:</label>
+        <input type="text" name="status" value="{{ ticket[4] }}"><br><br>
+
+        <label>Priorität:</label>
+        <input type="number" name="prioritaet" value="{{ ticket[6] }}"><br><br>
+
+        <label>Mitarbeiter Notizen:</label>
+        <textarea name="mitarbeiter_notizen" rows="5" cols="50">{{ ticket[11] }}</textarea><br><br>
+
+        <button type="submit">Speichern</button>
+    </form>
+</body>
+</html>

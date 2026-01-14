@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Mitarbeiter Übersicht</title>
+</head>
+<body>
+    <h1>Mitarbeiter Ticket-Übersicht</h1>
+
+    <h2>Nicht zugeordnet</h2>
+    <table border="1">
+        <tr><th>ID</th><th>Thema</th><th>Status</th><th>Kunde</th></tr>
+        {% for t in tickets_none %}
+        <tr>
+            <td>
+            <a href="{{ url_for('edit_ticket', ticket_id=t[0]) }}">{{ t[0] }}</a>
+            </td>
+            <td>{{ t[2] }}</td>
+            <td>{{ t[4] }}</td>
+            <td>{{ t[5] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h2>Priorität 1</h2>
+    <table border="1">
+        <tr><th>ID</th><th>Thema</th><th>Status</th><th>Kunde</th></tr>
+        {% for t in tickets_p1 %}
+        <tr>
+            <td>
+            <a href="{{ url_for('edit_ticket', ticket_id=t[0]) }}">{{ t[0] }}</a>
+            </td>
+            <td>{{ t[2] }}</td>
+            <td>{{ t[4] }}</td>
+            <td>{{ t[5] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h2>Priorität 2</h2>
+    <table border="1">
+        <tr><th>ID</th><th>Thema</th><th>Status</th><th>Kunde</th></tr>
+        {% for t in tickets_p2 %}
+        <tr>
+            <td>
+            <a href="{{ url_for('edit_ticket', ticket_id=t[0]) }}">{{ t[0] }}</a>
+            </td>
+            <td>{{ t[2] }}</td>
+            <td>{{ t[4] }}</td>
+            <td>{{ t[5] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h2>Priorität 3</h2>
+    <table border="1">
+        <tr><th>ID</th><th>Thema</th><th>Status</th><th>Kunde</th></tr>
+        {% for t in tickets_p3 %}
+        <tr>
+            <td>
+            <a href="{{ url_for('edit_ticket', ticket_id=t[0]) }}">{{ t[0] }}</a>
+            </td>
+            <td>{{ t[2] }}</td>
+            <td>{{ t[4] }}</td>
+            <td>{{ t[5] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

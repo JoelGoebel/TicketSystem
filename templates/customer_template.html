@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Meine Tickets</title>
+</head>
+<body>
+    <h1>Meine Tickets</h1>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Thema</th>
+            <th>Status</th>
+            <th>Priorität</th>
+            <th>Firma</th>
+            <th>Erstellt am</th>
+        </tr>
+        {% for t in tickets %}
+        <tr>
+            <td>{{ t[0] }}</td>
+            <td>{{ t[2] }}</td>
+            <td>{{ t[4] }}</td>
+            <td>{{ t[6] or 'Nicht zugeordnet' }}</td>
+            <td>{{ t[8] }}</td>
+            <td>{{ t[7] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
